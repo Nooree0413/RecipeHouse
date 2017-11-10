@@ -1,0 +1,39 @@
+.head-bg h1  {
+	-webkit-animation:flash linear 1s infinite;
+	animation:flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash{
+	0%{opacity:1;}
+	50%{opacity:.1;}
+	100%{opacity:1;}
+}
+
+@keyframes flash{
+	0%{opacity:1;}
+	50%{opacity:.1;}
+	100%{opacity:1;}
+}
+
+.pulseit  {
+	-webkit-animation:pulse linear 28s infinite;
+	animation:pulse linear 28s infinite;
+}
+
+@-webkit-keyframes pulse{
+	0%{width:500px;}
+	50%{width:650px;}
+	100%{width:500px;}
+}
+
+
+@keyframes pulse{
+	0%{width:500px;}
+	50%{width:650px;}
+	100%{width:500px;}
+}
+
+
+
+
+

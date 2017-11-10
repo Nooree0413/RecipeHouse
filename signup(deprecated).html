@@ -1,0 +1,228 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sign Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Food House Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />		
+<script src="js/jquery.min.js"> </script>
+<!--web-fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+<link href="css/flashPulse.css" rel='stylesheet' type='text/css' />
+	<style type="text/css">
+	.email{background:url(images/email.png) no-repeat ;}
+	.password{background:url(images/password.png) no-repeat;}
+	.fn{background:url(images/human.png) no-repeat;}
+	.ln{background:url(images/human.png) no-repeat ;}
+	.username{background:url(images/human.png) no-repeat ;}
+	</style>
+</head>
+<body>
+	<!--start-header-->
+	<div id="home" class="header">
+			<!--logo-->
+			<div class="header-top">
+			<div class="container">
+		<!--top-nav-->
+			<div class="top-nav">
+					<span class="menu two"> </span>
+					<ul>
+						<li><a href="home.php">Home</a></li> 
+						<li><a href="about.html">About</a></li>
+						<li><a href="recipes.php">RECIPES</a></li>
+						<li><a href="cuisine.html">CUISINES</a></li>
+						 
+						<li><a href="gallery.php">GALLERY</a></li> 
+						<li class="lost"><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+		<!-- script-for-menu -->
+				<script>
+					$(document).ready(function(){
+						$("span.menu").click(function(){
+							$(".top-nav ul").slideToggle(200);
+						});
+					});
+				</script>
+		</div>
+	<!--End-top-nav-script-->
+				<div class="clearfix"> </div>
+		</div>
+		<div class="head-bg">
+					<div class="logo three">
+							<a href="home.php"><h1>RECIPE<span>House</span></h1></a>
+					</div>
+		</div>
+		<!--/header-->
+	</div>	
+	<!--/Register-->
+	<div class="contact-section">
+		<div class="contact-head">
+			<div class="container">
+				<h3></h3>
+				
+			</div>
+		</div>
+		
+		<div class="contact-inner">
+		  <div class="container" style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;">
+			<h4 style="text-align: center;">Sign Up</h4><br/><br/><br/>
+			<p id="register">
+				<table cellspacing="1" style="font-family:verdana;">
+				<form method="" action="" name="myForm" onsubmit="return regFunc()"> 
+							<tr><td>First Name </td><td><input type="text" name="txt_fname" class="fn" id="fname"></td></tr>
+							<tr><td>Last Name </td><td><input type="text" name="txt_lname"class="ln" id="lname"></td></tr>
+							<tr><td>Date Of Birth </td><td><input type="date" name="txt_dob" id="dob"></td></tr> 
+							<tr><td>Username </td><td><input type="text" name="txt_uname" class="username" id="uname"></td></tr>
+							<tr><td>Email </td><td><input type="email" name="txt_email" placeholder="example@email.com" class="email" id="email"></td></tr>
+							<tr><td>Password </td><td><input type="password" name="txt_pwd" class="password" id="pwd"></td></tr>
+							<tr><td>Confirm Password </td><td><input type="password" name="txt_cpwd" class="password" id="cpwd" onblur="regFunc()"></td></tr>
+							
+
+							<tr><td><input type="submit"></td></tr>
+							
+							
+				</form>
+				</table>
+			</p>	
+			
+			
+				<script>
+			
+					function regFunc() {
+									
+						var fnameInput = document.forms["myForm"]["txt_fname"].value;
+						var lnameInput = document.forms["myForm"]["txt_lname"].value;
+						var unameInput = document.forms["myForm"]["txt_uname"].value;
+						var emailInput = document.forms["myForm"]["txt_email"].value;
+						var pwdInput = 	document.forms["myForm"]["txt_pwd"].value;
+						var cpwdInput = document.forms["myForm"]["txt_cpwd"].value;
+						
+						if (fnameInput== null || fnameInput == "")
+						{
+							alert("Please enter first name before submitting"); 
+								
+						}
+						
+						if (lnameInput== null || lnameInput == "")
+						{
+							alert("Please enter last name before submitting"); 
+						}
+						
+						if (unameInput== null || unameInput == "")
+						{
+							alert("Please enter a user name before submitting"); 
+						}
+						
+						if (emailInput== null || emailInput == "")
+						{
+							alert("Please enter email address before submitting"); 			
+						}
+							
+						if (pwdInput== null || pwdInput == "")
+						{
+							alert("Please enter a password before submitting"); 	
+						}
+					
+						if (cpwdInput== null || cpwdInput == "")
+						{
+							alert("Please confirm your password before submitting"); 
+						}
+					}
+				</script>
+				
+			</div>
+		</div>
+	</div>
+<!--/start-footer-->
+	<div class= "footer">
+		 <div class="container">                                                   
+			<div class="col-md-3 footer-grid">
+					<div class="logo two">
+						<a href="home.php"><h3>RECIPE<span>House</span></h3></a>
+					</div>
+				</div>
+				<div class=" col-md-3 footer-grid footer-grid2">
+					<div class="bottom-nav">
+					       <h4>EXPLORE</h4>
+							<ul>
+							<li><a class="active" href="home.php">Home</a></li> 
+							<li><a href="about.html">About</a></li>
+							<li><a href="recipes.php">RECIPES</a></li> 
+							<li><a href="404.html">cuisines</a></li> 
+							<li><a href="gallery.php">GALLERY</a></li> 
+							<li><a href="contact.html">Contact</a></li>
+							<div class="clearfix"> </div>
+						</ul>
+					 </div>
+				</div>
+				<div class=" col-md-3 footer-grid">
+					<div class="Office Address">
+				        <h4>ADDRESS</h4>
+				       <ul class="bottom-icons">
+							<li><a class="home" href="#"><span> </span></a>Recipe House,Mauritius</li>
+							<li><a class="mail" href="mailto:info@foodrecipe.com"><span> </span>info@recipehouse.com</a></li>
+							<li><a class="mbl" href="#"><span> </span></a>5 758 6974</li>	
+							<div class="clearfix"> </div>	
+						</ul>
+					 </div>
+				</div>
+				<div class="col-md-3 footer-grid">
+					<h4>SUBSCRIBE</h4>
+						<div class="support">
+						   <input type="text" class="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == 'Enter email to reset it') {this.value = 'Enter email to reset it';}">
+						<input type="submit" value="SUBMIT" class="botton">
+						     <p>Subscribe to our newsletter.Delivered every Wednesday, our weekly update is the best way to get a first look at brand-new recipes. Just enter your e-mail address, then sit back and receive all the food-inspiration you'll ever need.</p>
+						</div>
+				    </div>
+			    	<div class="clearfix"> </div>	
+				</div>
+			</div>
+			<div class="copy-right">
+			  <div class="container">
+				 	 <p>Copyright &copy; 2015 All Rights Reserved </p>
+			   </div>		
+
+			</div>		
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smooth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</body>
+</html>
