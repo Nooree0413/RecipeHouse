@@ -48,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div id="userlogin" class="form1 active">
 							<?php
 								
-								<?php
+								
 								
 								if(isset($_SESSION['admin_email'])){
 									echo  "<a id='loginbtn' href='admintask.php'>Admin</a>&nbsp;&nbsp;&nbsp;<a id='loginbtn' href='process_logout.php'>Log out</a>&nbsp;&nbsp;&nbsp;<a id='' href='search.php'>Search</a>";
