@@ -10,10 +10,8 @@
 	$email = mysql_real_escape_string($email);
 	$password = mysql_real_escape_string($password);
 
-	//creating hash password
-	$hashPassword=mysql_real_escape_string((md5($password)));
 	
-	$query = "SELECT * FROM register WHERE reg_email = '$email' AND reg_hashpassword = '$hashPassword';";
+	$query = "SELECT * FROM register WHERE reg_email = '$email' AND reg_password = '$password';";
 	$result = mysql_query($query) or die ("Failed to query database" . mysql_error());
 	
 	//Check for number of rows returned from $query
@@ -23,7 +21,7 @@
 	{
 		$row = mysql_fetch_array($result);
 		
-		if ($row['reg_email'] == $email && $row['reg_hashpassword']=$hashPassword)
+		if ($row['reg_email'] == $email && $row['reg_password']=$password)
 		{
 			// Start the session
 			session_start();

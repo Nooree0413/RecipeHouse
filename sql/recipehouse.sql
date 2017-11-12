@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2017 at 08:51 AM
+-- Generation Time: Nov 12, 2017 at 03:01 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `register` (
   `reg_fname` varchar(20) NOT NULL,
   `reg_lname` varchar(20) NOT NULL,
   `reg_dob` date NOT NULL,
-  `reg_hashpassword` varchar(255) NOT NULL,
+  `reg_password` varchar(255) NOT NULL,
   PRIMARY KEY (`reg_email`),
   KEY `reg_email` (`reg_email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -97,10 +97,11 @@ CREATE TABLE IF NOT EXISTS `register` (
 -- Dumping data for table `register`
 --
 
-INSERT INTO `register` (`reg_email`, `reg_fname`, `reg_lname`, `reg_dob`, `reg_hashpassword`) VALUES
-('johnsmith@test.com', 'John', 'Smith', '1987-08-25', '81dc9bdb52d04dc20036dbd8313ed055'),
-('tjones@gmail.com', 'Tom', 'Jones', '1988-05-26', '81dc9bdb52d04dc20036dbd8313ed055'),
-('dextmorg@live.com', 'Dexter', 'Morgan', '1978-03-19', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `register` (`reg_email`, `reg_fname`, `reg_lname`, `reg_dob`, `reg_password`) VALUES
+('johnsmith@test.com', 'John', 'Smith', '1987-08-25', 'test'),
+('tjones@gmail.com', 'Tom', 'Jones', '1988-05-26', 'test'),
+('dextmorg@live.com', 'Dexter', 'Morgan', '1978-03-19', 'test'),
+('shshs@fjf.com', 'shshs', 'ssss11', '1111-11-11', 'test');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
