@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2017 at 08:51 AM
+-- Generation Time: Nov 13, 2017 at 10:03 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.4.24
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `adminlogin` (
   `admin_fname` varchar(100) NOT NULL,
   `admin_lname` varchar(100) NOT NULL,
   `admin_dob` date NOT NULL,
-  `admin_hashpassword` varchar(150) NOT NULL,
+  `admin_password` varchar(150) NOT NULL,
   PRIMARY KEY (`admin_email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `adminlogin` (
 -- Dumping data for table `adminlogin`
 --
 
-INSERT INTO `adminlogin` (`admin_email`, `admin_fname`, `admin_lname`, `admin_dob`, `admin_hashpassword`) VALUES
-('nirvan.shewraj@umail.uom.ac.mu', 'Nirvan', 'Shewraj', '1996-10-16', '81dc9bdb52d04dc20036dbd8313ed055');
+INSERT INTO `adminlogin` (`admin_email`, `admin_fname`, `admin_lname`, `admin_dob`, `admin_password`) VALUES
+('test@test.com', 'test', 'test', '2017-11-09', 'test');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

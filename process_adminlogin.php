@@ -9,11 +9,8 @@
 	
 	$email = mysql_real_escape_string($email);
 	$password = mysql_real_escape_string($password);
-
-	//creating hash password
-	$hashPassword=mysql_real_escape_string((md5($password)));
 	
-	$query = "SELECT * FROM adminlogin WHERE admin_email = '$email' AND admin_hashpassword = '$hashPassword';";
+	$query = "SELECT * FROM adminlogin WHERE admin_email = '$email' AND admin_password = '$password';";
 	$result = mysql_query($query) or die ("Failed to query database" . mysql_error());
 	
 	//Check for number of rows returned from $query
@@ -23,7 +20,7 @@
 	{
 		$row = mysql_fetch_array($result);
 		
-		if ($row['admin_email'] == $email && $row['admin_hashpassword']=$hashPassword)
+		if ($row['admin_email'] == $email && $row['admin_password']=$password)
 		{
 			// Start the session
 			session_start();
