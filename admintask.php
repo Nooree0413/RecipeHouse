@@ -23,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/popup.css" rel='stylesheet' type='text/css' />	
 <link href="css/flashPulse.css" rel='stylesheet' type='text/css' />	
 <script src="js/jquery.min.js"> </script>
+
 <!--web-fonts-->
   <link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
 <!--//web-fonts-->
@@ -190,7 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           echo"<th>Date Of Birth</th></tr>";
 
 			while($row1=mysql_fetch_array($query)){
-				echo"<tr><td></td>";
+				echo"<tr><td id='userEmail'></td>";
 	            echo"<td></td>";
 	            echo"<td></td>";
 	            echo"<td></td></tr>";
@@ -339,6 +340,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										
 									});
 								</script>
+								<script src="js/displayXmlUserData.js"></script>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 </body>
