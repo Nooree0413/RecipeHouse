@@ -11,7 +11,7 @@
     $userQueryResult = mysql_query($userQuery) or die ('Query Failed' . mysql_error());
 
     $userXmlData = "<?xml version='1.0' encoding='UTF-8'?>
-    <users>";
+    <users xsi:noNamespaceSchemaLocation='users.xsd' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>";
 
     while ($row = mysql_fetch_array($userQueryResult))
     {
