@@ -190,10 +190,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           echo"<th>Date Of Birth</th></tr>";
 
 			while($row1=mysql_fetch_array($query)){
-				echo"<tr><td>".$row1['reg_email']."</td>";
-	            echo"<td>".$row1['reg_fname']."</td>";
-	            echo"<td>".$row1['reg_lname']."</td>";
-	            echo"<td>".$row1['reg_dob']."</td></tr>";
+				echo"<tr><td></td>";
+	            echo"<td></td>";
+	            echo"<td></td>";
+	            echo"<td></td></tr>";
 			}
 
 		 echo "</table>";
