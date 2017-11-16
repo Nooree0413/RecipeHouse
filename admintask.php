@@ -179,28 +179,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		
 		//displaying all users
-		 echo "<div style='overflow-x:auto;'>";
+		echo "<div style='overflow-x:auto;'>";
 
-		 echo "Current number of registered users: ".$noOfUser;
-		 echo "</br></br>";
+		echo "Current number of registered users: ".$noOfUser;
+		echo "</br></br>";
          
-          echo"<table>";
-          echo"<tr><th>Email Address</th>";
-          echo"<th>First Name</th>";
-          echo"<th>Last Name</th>";
-          echo"<th>Date Of Birth</th></tr>";
+        
+		echo "<div id='adminTask_userTableContent'></div>";
+		
 
-			while($row1=mysql_fetch_array($query)){
-				echo"<tr><td id='userEmail'></td>";
-	            echo"<td></td>";
-	            echo"<td></td>";
-	            echo"<td></td></tr>";
-			}
+        echo"</div>";
 
-		 echo "</table>";
-         echo"</div>";
-
-         echo"</br></br>";
+        echo"</br></br>";
 
          //displaying recipe details
          $query2=mysql_query("SELECT * FROM recipe") or die('could not find table'.mysql_error());
