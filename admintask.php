@@ -23,8 +23,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/popup.css" rel='stylesheet' type='text/css' />	
 <link href="css/flashPulse.css" rel='stylesheet' type='text/css' />	
 <script src="js/jquery.min.js"> </script>
-<script src="js/jquery.min.js"> </script>
-<script src="js/displayXmlUserData.js"></script>
 
 
 <!--web-fonts-->
@@ -183,14 +181,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		//displaying all users
 		echo "<div style='overflow-x:auto;'>";
-
-		echo "Current number of registered users: ".$noOfUser;
-		echo "</br></br>";
-         
-        
-		echo "<div id='adminTask_userTableContent'></div>";
-		
-
+		echo "<div id='adminTask_userDetails'></div>";
         echo"</div>";
 
         echo"</br></br>";
@@ -321,8 +312,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									});
 								</script>
 								<script src="js/displayXmlUserData.js"></script>
+								<script src="js/displayXmlRecipeData.js"></script>
+
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
-<script src="js/displayXmlRecipeData.js"></script>
 </body>
 </html>
