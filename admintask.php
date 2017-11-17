@@ -23,6 +23,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/popup.css" rel='stylesheet' type='text/css' />	
 <link href="css/flashPulse.css" rel='stylesheet' type='text/css' />	
 <script src="js/jquery.min.js"> </script>
+<script src="js/jquery.min.js"> </script>
+<script src="js/displayXmlUserData.js"></script>
+
 
 <!--web-fonts-->
   <link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
@@ -180,7 +183,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		//displaying all users
 		echo "<div style='overflow-x:auto;'>";
-		echo "<div id='adminTask_userDetails'></div>";
+
+		echo "Current number of registered users: ".$noOfUser;
+		echo "</br></br>";
+         
+        
+		echo "<div id='adminTask_userTableContent'></div>";
+		
+
         echo"</div>";
 
         echo"</br></br>";
@@ -200,6 +210,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
          echo"</div>";
 
           echo"</br></br>";
+
          //comment details
           $query3=mysql_query("SELECT * FROM comment") or die('could not find table'.mysql_error());
           $noOfcomment=mysql_num_rows($query3);
@@ -312,5 +323,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<script src="js/displayXmlUserData.js"></script>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+<script src="js/displayXmlRecipeData.js"></script>
 </body>
 </html>
