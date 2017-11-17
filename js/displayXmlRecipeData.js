@@ -10,7 +10,7 @@ xmlhttp.open("GET","recipes.xml",false);
 xmlhttp.send();
 var xmlDoc = xmlhttp.responseXML;
 
-xmlDoc = xmlDoc.getElementsByTagName("RecipeDetails");
+xmlDoc = xmlDoc.getElementsByTagName("Recipe");
 console.log(xmlDoc);
 
 var recipedetails = "<table><tr><th>Recipe Id</th><th>Recipe Name</th><th>Recipe Category</th><th>Recipe Yield</th><th>Recipe Preparation Time</th></tr>";

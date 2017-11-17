@@ -76,7 +76,7 @@ require 'connection.php';
         $recipeCommentcount = $row['rec_commentcount'];
 
         $userXmlData .= 
-        "<RecipeDetails>".
+        "<Recipe>".
         "<Id>".$recipeId ."</Id>".
         "<Name>".$recipeName."</Name>".
         "<Date>".$recipeDate."</Date>".
@@ -93,7 +93,7 @@ require 'connection.php';
         "<ImageUrlTwo>".$recipeImgurl2."</ImageUrlTwo>".
         "<ImageUrlThree>".$recipeImgurl3."</ImageUrlThree>".
         "<ImageUrlFour>".$recipeImgurl4."</ImageUrlFour>".
-        "<CommentCount>".$recipeCommentcount."</CommentCount></RecipeDetails>";
+        "<CommentCount>".$recipeCommentcount."</CommentCount></Recipe>";
     }
 
     $userXmlData .= "</Recipes>";
@@ -142,7 +142,7 @@ require 'connection.php';
         $recipeCommentcount = $row['rec_commentcount'];
 
         $userXmlData .= 
-        "<RecipeDetails>".
+        "<Recipe>".
         "<Id>".$recipeId ."</Id>".
         "<Name>".$recipeName."</Name>".
         "<Date>".$recipeDate."</Date>".
@@ -159,7 +159,7 @@ require 'connection.php';
         "<ImageUrlTwo>".$recipeImgurl2."</ImageUrlTwo>".
         "<ImageUrlThree>".$recipeImgurl3."</ImageUrlThree>".
         "<ImageUrlFour>".$recipeImgurl4."</ImageUrlFour>".
-        "<CommentCount>".$recipeCommentcount."</CommentCount></RecipeDetails>";
+        "<CommentCount>".$recipeCommentcount."</CommentCount></Recipe>";
     }
 
     $userXmlData .= "</Recipes>";
@@ -223,7 +223,7 @@ require 'connection.php';
         $recipeCommentcount = $row['rec_commentcount'];
 
         $userXmlData .= 
-        "<RecipeDetails>".
+        "<Recipe>".
         "<Id>".$recipeId ."</Id>".
         "<Name>".$recipeName."</Name>".
         "<Date>".$recipeDate."</Date>".
@@ -240,7 +240,7 @@ require 'connection.php';
         "<ImageUrlTwo>".$recipeImgurl2."</ImageUrlTwo>".
         "<ImageUrlThree>".$recipeImgurl3."</ImageUrlThree>".
         "<ImageUrlFour>".$recipeImgurl4."</ImageUrlFour>".
-        "<CommentCount>".$recipeCommentcount."</CommentCount></RecipeDetails>";
+        "<CommentCount>".$recipeCommentcount."</CommentCount></Recipe>";
     }
 
     $userXmlData .= "</Recipes>";
