@@ -180,14 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		//displaying all users
 		echo "<div style='overflow-x:auto;'>";
-
-		echo "Current number of registered users: ".$noOfUser;
-		echo "</br></br>";
-         
-        
-		echo "<div id='adminTask_userTableContent'></div>";
-		
-
+		echo "<div id='adminTask_userDetails'></div>";
         echo"</div>";
 
         echo"</br></br>";
