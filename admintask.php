@@ -201,26 +201,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		 echo "Current number of recipes: ".$noOfRecipe;
 		 echo "</br></br>";
+
+		 echo "<div id='adminTask_recipeTableContent'></div>";
          
-          echo"<table>";
-          echo"<tr><th>Recipe Id</th>";
-          echo"<th>Recipe Name</th>";
-          echo"<th>Recipe Category</th>";
-          echo"<th>Recipe Yield</th>";
-          echo"<th>Recipe Preparation Time</th></tr>";
-
-			while($row2=mysql_fetch_array($query2)){
-				echo"<tr><td>".$row2['recipe_id']."</td>";
-	            echo"<td>".$row2['recipe_name']."</td>";
-	            echo"<td>".$row2['recipe_category']."</td>";
-	            echo"<td>".$row2['recipe_yield']."</td>";
-	            echo"<td>".$row2['recipe_totaltime']."</td></tr>";
-			}
-
-
-		 echo "</table>";
          echo"</div>";
 
+          echo"</br></br>";
          //comment details
           $query3=mysql_query("SELECT * FROM comment") or die('could not find table'.mysql_error());
           $noOfcomment=mysql_num_rows($query3);
