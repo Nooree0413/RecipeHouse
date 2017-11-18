@@ -98,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$recipeImgUrl = $recipe->ImageUrlOne;
 							$recipeRegion = $recipe->Region;
 							$recipeDescription = $recipe->Description;
-							$recipeShortDescription = substr($recipeDescription,0,70);
+							$recipeShortDescription = substr($recipeDescription,0,73);
 
 							$recipeNameWithoutSpace = str_replace(" ","+",$recipeName);
 							$dynamicRecipeUrl = "view.php?recipe=" . $recipeNameWithoutSpace;
