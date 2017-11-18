@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cuisines.xsl"?>
+<Cuisines xsi:noNamespaceSchemaLocation= "cuisines.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Cuisine id="1">
+    <Type>Indian</Type>
+    <Dish>Spicy Potatoes</Dish>
+  </Cuisine>
+  <Cuisine id="2">
+    <Type>Chinese</Type>
+    <Dish>Noodles</Dish>
+  </Cuisine>
+  <Cuisine id="3">
+    <Type>Chinese</Type>
+    <Dish>Chicken Schezwan</Dish>
+  </Cuisine>
+  <Cuisine id="4">
+    <Type>Japanese</Type>
+    <Dish>Sushi</Dish>
+  </Cuisine>
+  <Cuisine id="5">
+    <Type>Italian</Type>
+    <Dish>Pizza</Dish>
+  </Cuisine>
+  <Cuisine id="6">
+    <Type>Turkish</Type>
+    <Dish>Turkish Rice</Dish>
+  </Cuisine>
+</Cuisines>

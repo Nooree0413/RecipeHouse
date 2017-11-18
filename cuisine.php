@@ -15,10 +15,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />		
 <script src="js/jquery.min.js"> </script>
+
 <!--web-fonts-->
   <link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
 <!--//web-fonts-->
 <link href="css/flashPulse.css" rel='stylesheet' type='text/css' />	
+<script src="js/displayXmlCuisineData.js"></script>
+<style>
+table,th,td {
+border : 1px solid black;
+border-collapse: collapse;
+}
+th,td {
+padding: 5px;
+}
+tr{
+	background-color: lightgrey;
+}
+
+button{
+	position: center;
+}
+</style>
 </head>
 <body>
 <!--start-header-->
@@ -80,24 +98,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 		</div>
 		<!--/header-->
-	</div>			
+	</div>	
+	<br/>
+	<br/>	
+
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	
-	<table border="4" cellpadding="10" width="100%">
-	<caption>TYPES OF CUISINES</caption>
-	<tr bgcolor="lightgrey"><th colspan="2">ITALIAN</th><th colspan="2" >INDIAN</th><th colspan="2" >TURKISH</th><th colspan="2" >LEBANESE</th> </tr>
-	<tr bgcolor="#1BBC9B"><td colspan="2"><a href="CapreseSaladwithPestoSauce.html">Caprese Salad with Pesto Sauce</a></td><td colspan="2"><a href="Indian Spiced Potatoes with Chicken Thighs.html"> Indian Spiced Potatoes with Chicken Thighs</td><td colspan="2"><a href="menu.html">Turkish Salad</td><td colspan="2"><a href="menu.html">Shish Kebab</td> </tr>
-	<tr bgcolor="lightgrey"><td colspan="2"><a href="Panzenella.html">Panzenella</a></td><td colspan="2"><a href="Vegan Garam Masala Carrot Soup.html"> Vegan Garam Masala Carrot Soup</td><td colspan="2"><a href="menu.html">Turkish Meatballs (Kofta)</td><td colspan="2"><a href="menu.html">Shawarma</td> </tr>
-	<tr  bgcolor="#1BBC9B"><td colspan="2"><a href="Italian style greens (Ricetta tipica per verdure verdi).html">Italian Style Green</td><td colspan="2"><a href="menu.html">Bhapaa Aloo</td><td colspan="2"><a href="menu.html">Turkish Red Lentil Soup</td><td colspan="2"><a href="menu.html">Baklava</td> </tr>
-	<tr bgcolor="lightgrey"><td colspan="2"><a href="menu.html">Focaccia Bread</td><td colspan="2"><a href="menu.html"> Banjari Gosht</td><td colspan="2"><a href="menu.html">Turkish Rice</td><td colspan="2"><a href="menu.html">Badem Tatlisi</td> </tr>
-	<tr  bgcolor="#1BBC9B"><td colspan="2"><a href="menu.html">Pasta Carbonara</td><td colspan="2"><a href="menu.html">Chicken Stew and Appam</td><td colspan="2"><a href="menu.html">Turkish Spinach and Lentil Soup</td><td colspan="2"><a href="menu.html">Kebbe</td> </tr>
-	<tr bgcolor="lightgrey"><td colspan="2"><a href="menu.html">Margherita Pizza</td><td colspan="2"><a href="menu.html">Kakori Kebab</td><td colspan="2"><a href="menu.html">Tabbouli / Tabbouleh Salad (Parsley Salad)</td><td colspan="2"><a href="menu.html">Lady Fingers</td> </tr>
-	<tr bgcolor="#1BBC9B"><td colspan="2"><a href="menu.html">Mushroom Risotto</td><td colspan="2"><a href="menu.html">Hyderabadi Biryani</td><td colspan="2"><a href="menu.html">Hummus Amongus</td><td colspan="2"><a href="menu.html">Kefta</td> </tr>
-	<tr bgcolor="lightgrey"><td colspan="2"><a href="menu.html">Pasta Con Pomodoro E Basilico</td><td colspan="2"><a href="menu.html">Dhokla</td><td colspan="2"><a href="menu.html">Turkish Cacik</td><td colspan="2"><a href="menu.html">Falafel</td> </tr>
-	<tr bgcolor="#1BBC9B"><td colspan="2"><a href="menu.html">Tiramisu - The 'pick-me-up' cake</td><td colspan="2"><a href="menu.html">Sali Boti</td><td colspan="2"><a href="menu.html">Pita Bread</td><td colspan="2"><a href="menu.html">Sahlab</td> </tr>
-	<tr bgcolor="lightgrey"><td colspan="2"><a href="menu.html">Panna Cotta With Raspberry Coulis</td><td colspan="2"><a href="menu.html"> Idli and Sambhar</td><td colspan="2"><a href="menu.html">Shakshouka</td><td colspan="2"><a href="menu.html">Fried Cauliflower Rolls</td> </tr>
-	</table>
-	
-	
+	<button  type="button" onclick="loadDoc()">Show Cuisines Type</button>
+
+	<br><br>
+
+	<table border="1" id="demo"></table>
+
+	<script>
+		function loadDoc() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+		myFunction(xhttp);
+		} }
+		xhttp.open("GET", "cuisines.xml", true);
+		xhttp.send(); }
+
+		function myFunction(xml) {
+		var i;
+		var xmlDoc = xml.responseXML;
+
+		var table="<tr><th>Type</th><th>Dish</th></tr>";
+		var x = xmlDoc.getElementsByTagName("Cuisine");
+		for (i = 0; i <x.length; i++) {
+		table += "<tr><td>" + x[i].getElementsByTagName("Type")[0].childNodes[0].nodeValue +
+		"</td><td>" +
+		x[i].getElementsByTagName("Dish")[0].childNodes[0].nodeValue +
+		"</td></tr>";
+		}
+		document.getElementById("demo").innerHTML = table;
+		}
+	</script>
+<br/><br>
 	
 <!--/start-footer-->
 	<div class= "footer">
