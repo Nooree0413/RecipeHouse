@@ -98,6 +98,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	        <div class="blog_top">
 				
 				
+				<!--Including php which will retrieve data from database-->
+				<?php
+					//Getting the Uniform Resource Indicator
+					$uri = $_SERVER['REQUEST_URI'];
+					//echo $uri . "<br/>";
+
+					//Getting the query part of the url
+					$parsedurl = parse_url($uri, PHP_URL_QUERY);
+					parse_str($parsedurl);
+
+					//Variable $recipe already exists as it has been passed from the url
+					//echo $recipe;
+
+					//Defining a session recipe to access it in other pages
+					$_SESSION['recipe'] = $recipe;
+
+					$query = "SELECT * FROM recipe WHERE recipe_name = '$recipe';";
+					$result = mysql_query($query) or die("Error processing query" . mysql_error());
+					
+					$row = mysql_fetch_array($result);		
+					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='pulseit' class='img-responsive' alt='' width='65%' height='65%'/>";
+					
+					echo "<h3><a href='view.php'>" . $row['recipe_name'] . "</a></h3>";
+					
+					echo "<h4>Posted By : Admin | Date : " . $row['recipe_date'] . "</h4><br/>";
+					
+					echo "<p>" . $row['recipe_description'] . "</p>";
+					
+					echo "<p>
+						<img src='" . $row['recipe_imgurl2'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img src='" . $row['recipe_imgurl3'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img src='" . $row['recipe_imgurl4'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<p style='clear: both;'>
+						</p>";
+
+					echo "<div class='ingredient-head'><h3>INGREDIENTS:</h3>" . $row['recipe_ingredients'] . "</div>";
+				?>
 
 				<p>
 					<table id = "addinfo" border="1" style="padding:50%;">
