@@ -90,7 +90,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="menu-section">
 		     <div class="container">
 			      <h2>Recipes</h2><br/><br/>
+					<?php
+						$xml = simplexml_load_file("recipes.xml");
+						
+						foreach($xml->Recipe as $recipe){
+							$recipeName = $recipe->Name;
+							$recipeImgUrl = $recipe->ImageUrlOne;
+							$recipeRegion = $recipe->Region;
+							$recipeDescription = $recipe->Description;
+							$recipeShortDescription = substr($recipeDescription,0,70);
 
+							$recipeNameWithoutSpace = str_replace(" ","+",$recipeName);
+							$dynamicRecipeUrl = "view.php?recipe=" . $recipeNameWithoutSpace;
+
+							echo "<div class='menu-grids'><div class='col-md-4 menu-grid'>
+							<a href='" . $dynamicRecipeUrl . "'>" . "<img src='" . $recipeImgUrl . "' class='img-responsive' alt='' /></a>
+							<div class='recipes head'><a href='" . $dynamicRecipeUrl . "'>" . $recipeName . "</a></div>
+							<div class='price'>
+								<span>" . $recipeRegion . "</span>
+							</div>
+							<p>" . $recipeShortDescription . "</p>
+						</div>";
+						}
+					?>
 			      		
 								
 					   
