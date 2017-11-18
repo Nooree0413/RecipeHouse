@@ -91,33 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		     <div class="container">
 			      <h2>Recipes</h2><br/><br/>
 
-			      		<?php
-			      			$query1 = "SELECT * FROM recipe";
-			      			$result1 = mysql_query($query1) or die ('ERROR: Query Failed');
-
-							while($row = mysql_fetch_array($result1))
-							{
-								$rname = $row['recipe_name'];
-								$rimgurl = $row['recipe_imgurl1'];
-								$rregion = $row['recipe_region'];
-								$rdesc = $row['recipe_description'];
-								$short_rdesc = substr($rdesc,0,75) . "...";
-
-								$concatenated_rname = str_replace(" ","+",$rname);
-
-								$built_rurl = "view.php?recipe=" . $concatenated_rname;
-
-								echo "<div class='menu-grids'><div class='col-md-4 menu-grid'>
-								<a href='" . $built_rurl . "'>" . "<img src='" . $rimgurl . "' class='img-responsive' alt='' /></a>
-								<div class='recipes head'><a href='" . $built_rurl . "'>" . $rname . "</a></div>
-								<div class='price'>
-                                    <span>" . $rregion . "</span>
-                                </div>
-								<p>" . $short_rdesc . "</p>
-							</div>";
-							}
-
-			      		?>
+			      		
 								
 					   
 				 </div>
