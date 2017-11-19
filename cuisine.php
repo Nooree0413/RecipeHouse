@@ -118,7 +118,7 @@ button{
 
 	<br><br>
 
-	<table border="1" id="demo"></table>
+	<table border="1" id="demo" align="center"></table>
 
 	<script>
 		function loadDoc() {
