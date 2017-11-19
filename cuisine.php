@@ -127,7 +127,7 @@ button{
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 		myFunction(xhttp);
 		} }
-		xhttp.open("GET", "cuisines.xml", true);
+		xhttp.open("GET", "xml/cuisines.xml", true);
 		xhttp.send(); }
 
 		function myFunction(xml) {
