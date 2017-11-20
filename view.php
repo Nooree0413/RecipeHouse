@@ -118,37 +118,74 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					$result = mysql_query($query) or die("Error processing query" . mysql_error());
 					
 					$row = mysql_fetch_array($result);		
-					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='pulseit' class='img-responsive' alt='' width='65%' height='65%'/>";
+					$recipeDataFromUrl = $_GET['recipe'];
 					
-					echo "<h3><a href='view.php'>" . $row['recipe_name'] . "</a></h3>";
+					$xml = simplexml_load_file("recipes.xml");
+					$recipeNameWithoutSpace = str_replace("+"," ",$recipeDataFromUrl);
+					foreach($xml->Recipe as $recipe){
+
+						if ($recipe->Name == $recipeNameWithoutSpace)
+						{
+
+						
+						$recipeName = $recipe->Name;
+						$recipeDate = $recipe->Date;
+						$recipeIngredients = $recipe->Ingredients;
+						$recipeYield = $recipe->Yield;
+						$recipePreparationTime = $recipe->PreparationTime;
+						$recipeCookingTime = $recipe->CookingTime;
+						$recipeTotalTime = $recipe->TotalTime;
+						$recipeDirections = $recipe->Directions;
+						$recipeImgUrl1 = $recipe->ImageUrlOne;
+						$recipeImgUrl2 = $recipe->ImageUrlTwo;
+						$recipeImgUrl3 = $recipe->ImageUrlThree;
+						$recipeImgUrl4 = $recipe->ImageUrlFour;
+						$recipeRegion = $recipe->Region;
+						$recipeDescription = $recipe->Description;
+						$recipeCommentCount = $recipe->CommentCount;
+						
+
+						$recipeNameWithoutSpace = str_replace(" ","+",$recipeName);
+						$dynamicRecipeUrl = "view.php?recipe=" . $recipeNameWithoutSpace;
+						
 					
-					echo "<h4>Posted By : Admin | Date : " . $row['recipe_date'] . "</h4><br/>";
+					echo "<img src= ' " . $recipeImgUrl1 . " ' class='pulseit' class='img-responsive' alt='' width='65%' height='65%'/>";
 					
-					echo "<p>" . $row['recipe_description'] . "</p>";
+					echo "<h3><a href='view.php'>" . $recipeName . "</a></h3>";
+					
+					echo "<h4>Posted By : Admin | Date : " . $recipeDate . "</h4><br/>";
+					
+					echo "<p>" . $recipeDescription . "</p>";
 					
 					echo "<p>
-						<img src='" . $row['recipe_imgurl2'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
-						<img src='" . $row['recipe_imgurl3'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
-						<img src='" . $row['recipe_imgurl4'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img src='" . $recipeImgUrl2 . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img src='" . $recipeImgUrl3 . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img src='" . $recipeImgUrl4 . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
 						<p style='clear: both;'>
 						</p>";
 
-					echo "<div class='ingredient-head'><h3>INGREDIENTS:</h3>" . $row['recipe_ingredients'] . "</div>";
+					echo "<div class='ingredient-head'><h3>INGREDIENTS:</h3>" . $recipeIngredients . "</div>";
+					
+					$_SESSION['recipe'] = $recipe;
+						
+					
+				}
+			}
 				?>
 
 				<p>
 					<table id = "addinfo" border="1" style="padding:50%;">
 						<th colspan="2">ADDITIONAL INFO</th>
-						<tr><td> Yield </td><td><?php echo $row['recipe_yield']; ?> Servings</td></tr>
-						<tr><td>Prep Time</td><td><?php echo $row['recipe_preptime']; ?> </td></tr>
-						<tr><td>Cook Time</td><td> <?php echo $row['recipe_cooktime']; ?> </td></tr>
-						<tr><td>Total Time</td><td><?php echo $row['recipe_totaltime']; ?> </td></tr>
+						<tr><td> Yield </td><td><?php echo $recipeYield; ?> Servings</td></tr>
+						<tr><td>Prep Time</td><td><?php echo $recipePreparationTime; ?> </td></tr>
+						<tr><td>Cook Time</td><td> <?php echo $recipeCookingTime; ?> </td></tr>
+						<tr><td>Total Time</td><td><?php echo $recipeTotalTime; ?> </td></tr>
 					</table>
 				</p>
 
 				<h3>DIRECTIONS:</h3>
 				<p style="font-family: 'Open Sans', sans-serif;">
-					<?php echo $row['recipe_directions']; ?>
+					<?php echo $recipeDirections; ?>
 				</p>
 		
 				  <div class="single_grid">
@@ -163,8 +200,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  		  		$query_result1 = mysql_query($query_commentnum) or die ('ERROR: Could not obtain the number of comments from database');
 			  		  		$row = mysql_fetch_array($query_result1);
 
-			  		  		echo "<li><a><i class='blog_circle'>" . $row['rec_commentcount'] . "</i><span>";
-			  		  		if ($row['rec_commentcount'] < 2) 
+			  		  		echo "<li><a><i class='blog_circle'>" . $recipeCommentCount . "</i><span>";
+			  		  		if ($recipeCommentCount < 2) 
 			  		  			{
 			  		  				echo "Comment";
 			  		  			} 
