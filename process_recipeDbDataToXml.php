@@ -30,8 +30,7 @@
         $recipeCommentcount = $row['rec_commentcount'];
 
         $userXmlData .= 
-        "<Recipe>".
-        "<Id>".$recipeId ."</Id>".
+        "<Recipe id='" . $recipeId ."' Category='" . $recipeCategory . "'>".
         "<Name>".$recipeName."</Name>".
         "<Date>".$recipeDate."</Date>".
         "<Region>".$recipeRegion."</Region>".
@@ -42,7 +41,6 @@
         "<CookingTime>".$recipeCooktime."</CookingTime>".
         "<TotalTime>".$recipeTotaltime."</TotalTime>".
         "<Directions>".$recipeDirections."</Directions>".
-        "<Category>".$recipeCategory."</Category>".
         "<ImageUrlOne>".$recipeImgurl1."</ImageUrlOne>".
         "<ImageUrlTwo>".$recipeImgurl2."</ImageUrlTwo>".
         "<ImageUrlThree>".$recipeImgurl3."</ImageUrlThree>".
