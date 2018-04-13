@@ -105,43 +105,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$recipeSearch = $_POST['txt_rsearch'];
 						}
 
-						$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
+						$filterSearchresult = str_replace(" ","+",$recipeSearch);
+
+						//$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
+						echo $url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=".$filterSearchresult."&sort=r";
 
 						$client = curl_init($url);
 						curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
 						$response = curl_exec($client);
-
 						$result = json_decode($response,true);
 
 						// print_r($result);
 						//echo $result["count"];
 						$recipes = $result["recipes"];
-						
 						$recipe = $recipes;
 						//print_r($recipe);
 
 						foreach($recipe as $key => $item){
-							
-
 							$imgUrl = $item['image_url'];
 							$title = $item['title'];
+							$recipeUrl = $item['source_url'];
 
 							echo '<div class="col-md-4 menu-grid">
-							<a href=""> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
-								<div class="price">
-								<span>$</span>2<span>55</span>
-							</div>
-							<p>'.$title.'</p>
-						</div>';
+							<a href="'. $recipeUrl. '" target="_blank"> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
+								
+							<a href="'.$recipeUrl.'" target="_blank">'.$title.'</a></div>';
 						}
-
-						// echo $result->recipes[0]->title;
-						// echo $result->recipes[0]->image_url;
-
-						// foreach($result as $key => $value) {
-						// 	echo $value["recipes"]["title"] . ", " . $value->recipes[$key]->image_url . "<br>";
-						//   }
-
 					?>
 					
 					<!-- <div class="col-md-4 menu-grid">
