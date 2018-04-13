@@ -40,9 +40,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="home.php">Home</a></li> 
 						<li><a href="about.html">About</a></li>
 						<li><a href="cuisine.html">Cuisines</a></li>
-						<li><a class="active" href="recipes.php">Recipes</a></li> 
+						<li><a href="recipes.php">Recipes</a></li> 
 						
-						<li><a href="gallery.php">Gallery</a></li> 
+						<li><a class="active" href="gallery.php">Gallery</a></li> 
 						<li><a href="contact.html">Contact</a></li>
 						
 						<div id="userlogin" class="form1 active">
@@ -91,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			    <h2>Online Search</h2>
 				<p>You can search for recipes and the API will return results according to top ratings from social media.</p>
 
-				<form class="con" name="searchForm" action="menu.php" method="POST"> 
+				<form class="con" name="searchForm" action="gallery.php" method="POST"> 
 					<div class="form-group">
 						<label for="usr">Recipe:</label>
 						<input name="txt_rsearch" type="text" class="text" placeholder="Recipe Name"/>
