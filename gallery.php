@@ -4,13 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
 <?php
 	session_start();
 ?>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Food House a Hotels and Restaurants Category Flat Bootstarp responsive Website Template|Portfolio :: w3layouts</title>
+<title>Food House a Hotels and Restaurants Category Flat Bootstarp responsive Website Template | Menu :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Food House Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -19,7 +19,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />	
-<link href="css/flashPulse.css" rel='stylesheet' type='text/css' />		
+<link href="css/dropdown.css 	 rel='stylesheet' type='text/css' />	
+<link href="css/menu.css" rel='stylesheet' type='text/css' />	
+<link href="css/flashPulse.css" rel='stylesheet' type='text/css' />	
 <script src="js/jquery.min.js"> </script>
 <!--web-fonts-->
   <link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
@@ -36,12 +38,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="menu two"> </span>
 					<ul>
 						<li><a href="home.php">Home</a></li> 
-						<li><a href="about.php">About</a></li>
-						<li><a href="cuisine.php">Cuisines</a></li>
-						<li><a href="recipes.php">Recipes</a></li> 
-						<!--<li><a href="blog.html">Blog</a></li> -->
-						<li><a class="active" href="gallery.php">Gallery</a></li> 
-						<li class="lost"><a href="contact.php">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="cuisine.html">Cuisines</a></li>
+						<li><a class="active" href="recipes.php">Recipes</a></li> 
+						
+						<li><a href="gallery.php">Gallery</a></li> 
+						<li><a href="contact.html">Contact</a></li>
 						
 						<div id="userlogin" class="form1 active">
 							<?php
@@ -84,105 +86,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!--/header-->
 	</div>
-<!--gallery-->
-	<div class="gallery services">
-		<div class="container">
-				<h3>Portfolio</h3>
-			<div class="portfolio-bottom">
-				<div class="gallery-one two">
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g1.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
+	<div class="menu-section">
+		    <div class="container">
+			    <h2>Online Search</h2>
+				<p>You can search for recipes and the API will return results according to top ratings from social media.</p>
+
+				<form class="con" name="searchForm" action="menu.php" method="POST"> 
+					<div class="form-group">
+						<label for="usr">Recipe:</label>
+						<input name="txt_rsearch" type="text" class="text" placeholder="Recipe Name"/>
+						<input name="btn_submit" type="submit" value="Search">
 					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/b7.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/b7.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g4.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g4.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g3.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g5.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g5.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g2.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g2.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g6.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g6.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g1.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g1.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g1.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/b7.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/b7.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/b8.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/b8.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
-					<div class="col-md-3 gallery-left two">
-						<a href="images/g3.jpg" class=" mask b-link-stripe b-animate-go   swipebox"  title="Image Title">
-								<img src="images/g3.jpg" alt="" class="img-responsive zoom-img"/>
-						</a>
-					</div>
+					
+				</form>		
+
+		       	<div class="menu-grids">
+
+				   	<?php
+						if (isset($_POST['txt_rsearch'])){
+							$recipeSearch = $_POST['txt_rsearch'];
+							
+							$filterSearchresult = str_replace(" ","+",$recipeSearch);
+
+							//$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
+							$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=".$filterSearchresult."&sort=r";
+
+							$client = curl_init($url);
+							curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
+							$response = curl_exec($client);
+							$result = json_decode($response,true);
+
+							// print_r($result);
+							//echo $result["count"];
+							$recipes = $result["recipes"];
+							$recipe = $recipes;
+							//print_r($recipe);
+
+							foreach($recipe as $key => $item){
+								$imgUrl = $item['image_url'];
+								$title = $item['title'];
+								$recipeUrl = $item['source_url'];
+
+								echo '<div class="col-md-4 menu-grid">
+								<a href="'. $recipeUrl. '" target="_blank"> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
+									
+								<a href="'.$recipeUrl.'" target="_blank">'.$title.'</a></div>';
+							}	
+						}
+					?>
+										
 				</div>
 			</div>
 		</div>
-	</div>
-	<!--swipebox -->	
-			<link rel="stylesheet" href="css/swipebox.css">
-				<script src="js/jquery.swipebox.min.js"></script> 
-				<script type="text/javascript">
-					jQuery(function($) {
-						$(".swipebox").swipebox();
-					});
-				</script>
-			<!--//swipebox Ends -->
-
+		</div>
 	<!--/start-reservations-->
-          	<div class= "reservation">
-				<div class="container"> 
-				     <div class="re-main">
-					    <h3>Cooking</h3>
-						 <p>Cookery is not chemistry. It is an art. It requires instinct and taste rather than exact measurements.</br>
-						    Marcel Boulestin</p>
-						
-					 </div>
-				</div>
-			</div>		 
-	<!--/end-reservations-->	
-
-	<!--/start-footer-->
-	<div class= "footer">
+          	<br/>
+			<br/>
+	<!--/end-reservations-->
+	
+<!--/start-footer-->
+	<!--<div class= "footer">
 		 <div class="container">                                                   
 			<div class="col-md-3 footer-grid">
 					<div class="logo two">
-						<a href="home.php"><h3>Recipe<span>House</span></h3></a>
+						<a href="home.php"><h3>RECIPE<span>House</span></h3></a>
 					</div>
 				</div>
 				<div class=" col-md-3 footer-grid footer-grid2">
@@ -190,12 +157,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					       <h4>LEARN</h4>
 							<ul>
 							<li><a class="active" href="home.php">Home</a></li> 
-						<li><a href="about.html">About</a></li>
-						<li><a href="cuisine.html">CUISINES</a></li>
-						<li><a href="recipes.php">RECIPES</a>	</li>
-						<!--<li><a href="404.html">BLOG</a></li>--> 
-						<li><a href="gallery.php">GALLERY</a></li> 
-						<li class="lost"><a href="contact.html">Contact</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="menu.html">RECIPES</a></li> 
+							<li><a href="blog.html">Blog</a></li> 
+							<li><a href="gallery.php">GALLERY</a></li> 
+							<li><a href="contact.html">Contact</a></li>
 							<div class="clearfix"> </div>
 						</ul>
 					 </div>
@@ -204,19 +170,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="Office Address">
 				        <h4>ADDRESS</h4>
 				       <ul class="bottom-icons">
-							<li><a class="home" href="#"><span> </span></a>Food Recipe,Mauritius</li>
-							<li><a class="mail" href="mailto:info@foodrecipe.com"><span> </span>info@foodrecipe.com</a></li>
-							<li><a class="mbl" href="#"><span> </span></a>5 758 6974</li>	
+							<li><a class="home" href="#"><span> </span></a>Lorem ipsy street,Newyork</li>
+							<li><a class="mail" href="mailto:info@example.com"><span> </span>123 int@example.com</a></li>
+							<li><a class="mbl" href="#"><span> </span></a>+91 000 00 00 00 0</li>	
 							<div class="clearfix"> </div>	
 						</ul>
 					 </div>
 				</div>
 				<div class="col-md-3 footer-grid">
-					<h4></h4>
+					<h4>SUPPORT WITH</h4>
 						<div class="support">
-						   <input type="text" class="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == 'Enter email to reset it') {this.value = 'Enter email to reset it';}">
+						   <input type="text" class="text" value="Enter email to reset it" onfocus="this.value = '';" onblur="if (this.value == 'Enter email to reset it') {this.value = 'Enter email to reset it';}">
 						<input type="submit" value="SUBMIT" class="botton">
-						     						     <p>Subscribe to our newsletter.Delivered every Wednesday, our weekly update is the best way to get a first look at brand-new recipes. Just enter your e-mail address, then sit back and receive all the food-inspiration you'll ever need.</p>
+						     						     <p>Lorem ipsum dolor sit amet conse aliqua. Ut enim ad minim veniam Lorem ctetur adipisicing .</p>
 						</div>
 				    </div>
 			    	<div class="clearfix"> </div>	
@@ -224,10 +190,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="copy-right">
 			  <div class="container">
-					 <p>Copyright &copy; 2015 All Rights Reserved Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+					 <p>Copyright &copy; 2015 All Rights Reserved </p>
 			   </div>		
 
-			</div>	
+			</div>
 			<!--start-smoth-scrolling-->
 			<script type="text/javascript">
 								jQuery(document).ready(function($) {
@@ -238,16 +204,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								});
 								</script>
 							<!--start-smooth-scrolling-->
-						<script type="text/javascript">
+						<!--<script type="text/javascript">
 									$(document).ready(function() {
-										/*
+									
 										var defaults = {
 								  			containerID: 'toTop', // fading element id
 											containerHoverID: 'toTopHover', // fading element hover id
 											scrollSpeed: 1200,
 											easingType: 'linear' 
 								 		};
-										*/
+										
 										
 										$().UItoTop({ easingType: 'easeOutQuart' });
 										
