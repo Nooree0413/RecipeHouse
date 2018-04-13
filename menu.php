@@ -114,16 +114,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$result = json_decode($response,true);
 
 						// print_r($result);
-						echo $result["count"];
+						//echo $result["count"];
 						$recipes = $result["recipes"];
+						
+						$recipe = $recipes;
+						//print_r($recipe);
 
-						foreach($recipes as $key => $recipe){
-							$recipe = $recipes;
-							print_r($recipe);
+						foreach($recipe as $key => $item){
+							
+
+							$imgUrl = $item['image_url'];
+							$title = $item['title'];
+
+							echo '<div class="col-md-4 menu-grid">
+							<a href=""> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
+								<div class="price">
+								<span>$</span>2<span>55</span>
+							</div>
+							<p>'.$title.'</p>
+						</div>';
 						}
 
-
-						echo $recipe["publisher"];
 						// echo $result->recipes[0]->title;
 						// echo $result->recipes[0]->image_url;
 
@@ -132,14 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						//   }
 
 					?>
-					<div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g1.jpg" class="img-responsive" alt="" /></a>
-							<div class="price">
-							<span>$</span>2<span>55</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					</div>
-
+					
 					<!-- <div class="col-md-4 menu-grid">
 						<a href="single.html"> <img src="images/g2.jpg" class="img-responsive" alt="" /></a>
 						<div class="price">
