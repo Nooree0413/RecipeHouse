@@ -90,63 +90,96 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		     <div class="container">
 			    <h2>Menu</h2>
 				  
-				<form class="con" name="searchForm"> 
-			    	<input type="text" class="text" value="Recipe Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-						<input name="submit" type="submit" value="Search">
+				<form class="con" name="searchForm" action="menu.php" method="POST"> 
+			    	<input name="txt_rsearch" type="text" class="text" placeholder="Recipe Name"/>
+					<input name="btn_submit" type="submit" value="Search">
 				</form>
+				
+				
+
+		       	<div class="menu-grids">
+
+				   	<?php
+
+						if (isset($_POST['txt_rsearch'])){
+							$recipeSearch = $_POST['txt_rsearch'];
+						}
+
+						$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
+
+						$client = curl_init($url);
+						curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
+						$response = curl_exec($client);
+
+						$result = json_decode($response,true);
+
+						// print_r($result);
+						echo $result["count"];
+						$recipes = $result["recipes"];
+
+						foreach($recipes as $key => $recipe){
+							$recipe = $recipes;
+							print_r($recipe);
+						}
 
 
+						echo $recipe["publisher"];
+						// echo $result->recipes[0]->title;
+						// echo $result->recipes[0]->image_url;
 
-				       <div class="menu-grids">
-					        <div class="col-md-4 menu-grid">
-                              <a href="single.html"> <img src="images/g1.jpg" class="img-responsive" alt="" /></a>
-									<div class="price">
-                                    <span>$</span>2<span>55</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						// foreach($result as $key => $value) {
+						// 	echo $value["recipes"]["title"] . ", " . $value->recipes[$key]->image_url . "<br>";
+						//   }
 
-							</div>
+					?>
+					<div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g1.jpg" class="img-responsive" alt="" /></a>
+							<div class="price">
+							<span>$</span>2<span>55</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
 
-							<!-- <div class="col-md-4 menu-grid">
-								<a href="single.html"> <img src="images/g2.jpg" class="img-responsive" alt="" /></a>
-								<div class="price">
-                                    <span>$</span>1<span>75</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<!-- <div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g2.jpg" class="img-responsive" alt="" /></a>
+						<div class="price">
+							<span>$</span>1<span>75</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-							</div>
-							<div class="col-md-4 menu-grid">
-								<a href="single.html"> <img src="images/g4.jpg" class="img-responsive" alt="" /></a>
-								<div class="price">
-                                    <span>$</span>6<span>75</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+					<div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g4.jpg" class="img-responsive" alt="" /></a>
+						<div class="price">
+							<span>$</span>6<span>75</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-							</div>
-							<div class="col-md-4 menu-grid">
-								<a href="single.html"> <img src="images/g3.jpg" class="img-responsive" alt="" /></a>
-								<div class="price">
-                                    <span>$</span>8<span>75</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+					<div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g3.jpg" class="img-responsive" alt="" /></a>
+						<div class="price">
+							<span>$</span>8<span>75</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-							</div>
-							<div class="col-md-4 menu-grid">
-								<a href="single.html"> <img src="images/g5.jpg" class="img-responsive" alt="" /></a>
-								<div class="price">
-                                    <span>$</span>9<span>75</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+					<div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g5.jpg" class="img-responsive" alt="" /></a>
+						<div class="price">
+							<span>$</span>9<span>75</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-							</div>
-							<div class="col-md-4 menu-grid">
-								<a href="single.html"> <img src="images/g6.jpg" class="img-responsive" alt="" /></a>
-								<div class="price">
-                                    <span>$</span>3<span>75</span>
-                                </div>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					</div>
+					<div class="col-md-4 menu-grid">
+						<a href="single.html"> <img src="images/g6.jpg" class="img-responsive" alt="" /></a>
+						<div class="price">
+							<span>$</span>3<span>75</span>
+						</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-							</div> -->
+					</div> -->
 					   </div>
 				 </div>
 			 </div>
