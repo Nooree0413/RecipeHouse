@@ -87,95 +87,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--/header-->
 	</div>
 	<div class="menu-section">
-		     <div class="container">
+		    <div class="container">
 			    <h2>Menu</h2>
-				  
+				<p>You can search for recipes and filter results by rating or trendiness from social media to determine the best recipes.</p>
+
 				<form class="con" name="searchForm" action="menu.php" method="POST"> 
-			    	<input name="txt_rsearch" type="text" class="text" placeholder="Recipe Name"/>
-					<input name="btn_submit" type="submit" value="Search">
-				</form>
-				
-				
+					<div class="form-group">
+						<label for="usr">Recipe:</label>
+						<input name="txt_rsearch" type="text" class="text" placeholder="Recipe Name"/>
+						<select name="sortType">
+							<option value="r">Rating</option>
+							<option value="t">Trending</option>
+						</select>
+						<input name="btn_submit" type="submit" value="Search">
+					</div>
+					
+				</form>		
 
 		       	<div class="menu-grids">
 
 				   	<?php
 
-						if (isset($_POST['txt_rsearch'])){
+						if (isset($_POST['txt_rsearch']) && isset($_POST['sortType'])){
 							$recipeSearch = $_POST['txt_rsearch'];
-						}
+							$sortType = $_POST['sortType'];
 
-						$filterSearchresult = str_replace(" ","+",$recipeSearch);
+							$filterSearchresult = str_replace(" ","+",$recipeSearch);
 
-						//$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
-						echo $url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=".$filterSearchresult."&sort=r";
+							//$url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=shredded+chicken&sort=r";
+							echo $url = "http://food2fork.com/api/search?key=a284455a12870b339322b1ece92aa191&q=".$filterSearchresult."&sort=".$sortType;
 
-						$client = curl_init($url);
-						curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
-						$response = curl_exec($client);
-						$result = json_decode($response,true);
+							$client = curl_init($url);
+							curl_setopt($client,CURLOPT_RETURNTRANSFER,1);
+							$response = curl_exec($client);
+							$result = json_decode($response,true);
 
-						// print_r($result);
-						//echo $result["count"];
-						$recipes = $result["recipes"];
-						$recipe = $recipes;
-						//print_r($recipe);
+							// print_r($result);
+							//echo $result["count"];
+							$recipes = $result["recipes"];
+							$recipe = $recipes;
+							//print_r($recipe);
 
-						foreach($recipe as $key => $item){
-							$imgUrl = $item['image_url'];
-							$title = $item['title'];
-							$recipeUrl = $item['source_url'];
+							foreach($recipe as $key => $item){
+								$imgUrl = $item['image_url'];
+								$title = $item['title'];
+								$recipeUrl = $item['source_url'];
 
-							echo '<div class="col-md-4 menu-grid">
-							<a href="'. $recipeUrl. '" target="_blank"> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
-								
-							<a href="'.$recipeUrl.'" target="_blank">'.$title.'</a></div>';
+								echo '<div class="col-md-4 menu-grid">
+								<a href="'. $recipeUrl. '" target="_blank"> <img src="'.$imgUrl.'" class="img-responsive" alt="" /></a>
+									
+								<a href="'.$recipeUrl.'" target="_blank">'.$title.'</a></div>';
+							}	
 						}
 					?>
 					
-					<!-- <div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g2.jpg" class="img-responsive" alt="" /></a>
-						<div class="price">
-							<span>$</span>1<span>75</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-					</div>
-					<div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g4.jpg" class="img-responsive" alt="" /></a>
-						<div class="price">
-							<span>$</span>6<span>75</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-					</div>
-					<div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g3.jpg" class="img-responsive" alt="" /></a>
-						<div class="price">
-							<span>$</span>8<span>75</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-					</div>
-					<div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g5.jpg" class="img-responsive" alt="" /></a>
-						<div class="price">
-							<span>$</span>9<span>75</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-					</div>
-					<div class="col-md-4 menu-grid">
-						<a href="single.html"> <img src="images/g6.jpg" class="img-responsive" alt="" /></a>
-						<div class="price">
-							<span>$</span>3<span>75</span>
-						</div>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-					</div> -->
-					   </div>
-				 </div>
-			 </div>
+					
+				</div>
+			</div>
+		</div>
 		</div>
 	<!--/start-reservations-->
           	<br/>
@@ -245,7 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 									});
 								});
-								</script>-->
+								</script>
 							<!--start-smooth-scrolling-->
 						<!--<script type="text/javascript">
 									$(document).ready(function() {
