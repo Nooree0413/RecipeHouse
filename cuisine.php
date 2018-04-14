@@ -56,6 +56,7 @@ button{
 						<!--<li><a href="single.php">SERVICES</a></li> -->
 						<li><a href="gallery.php">GALLERY</a></li> 
 						<li><a href="contact.php">Contact</a></li>
+						<li><a  href="recipeSearch.php">Search Recipe</a></li>
 						
 						<div id="userlogin" class="form1 active">
 							<?php
