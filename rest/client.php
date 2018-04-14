@@ -17,7 +17,7 @@ Temperature:
 
 		$tempFC=$_POST['temperature'];
 
-		$url="http://localhost/web/RecipeHouse/rest/$tempFC";
+		$url="http://localhost/web/RecipeHouse/rest".$tempFC;
 		$client=curl_init($url);
 
 		curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
