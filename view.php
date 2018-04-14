@@ -100,6 +100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!--Including php which will retrieve data from database-->
 				<?php
 					//Getting the Uniform Resource Indicator
+					
 					$uri = $_SERVER['REQUEST_URI'];
 					//echo $uri . "<br/>";
 
@@ -117,7 +118,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					$result = mysql_query($query) or die("Error processing query" . mysql_error());
 					
 					$row = mysql_fetch_array($result);		
-					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='img-rounded img-responsive col-xs-6' align'center' alt='' width='65%' height='65%'/>";
+					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='img-rounded img-responsive col-md-4' align'center' alt='' width='65%' height='65%'/>";
 					
 					echo "<h3><a href='view.php'>" . $row['recipe_name'] . "</a></h3>";
 					
@@ -133,12 +134,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</p>";
 
 					echo "<div class='ingredient-head'><h3>INGREDIENTS:</h3>" . $row['recipe_ingredients'] . "</div>";
+					
+					echo "<div class='well well-lg'><p>Our API allows you to save time and select products you need before you can start cooking.</p><form class='col-xs-12' name='' action='' method='POST'>Enter ingredient name: <input class='form-control-static' type='text' name='txt_ingrName'/>&nbsp;<input class='btn btn-primary' type='submit' name='btn_search/' value='Search'></form><br/><br/><div class='clearfix'></div>";
+					
+					if (isset($_POST['txt_ingrName'])){
+						$ingrName = $_POST['txt_ingrName'];
+
+						include "soapClient.php";
+						echo "<div class='table-responsive'><table class='table'> <th>Image</th><th>Product Name</th> <th>Categories</th>";
+
+						for ($i=0;$i<10;$i++){
+							$item = $productsArray[$i];
+							$itemName = $item["Itemname"];
+							$itemImageUrl = $item["ItemImage"];
+							$itemCategory = $item["ItemCategory"];
+							
+							echo "<tr><td><img src='". $itemImageUrl ."'></td><td>".$itemName."</td><td>". $itemCategory ."</td></tr>";
+						}
+						
+						echo "</table></div></div>";
+					}
 				?>
 
 				<p>
 					<table id = "addinfo" border="1" style="padding:50%;">
 						<th colspan="2">ADDITIONAL INFO</th>
-						<tr><td> Yield </td><td><?php echo $row['recipe_yield']; ?> Servings</td></tr>
+						<tr><td>Yield </td><td><?php echo $row['recipe_yield']; ?> Servings</td></tr>
 						<tr><td>Prep Time</td><td><?php echo $row['recipe_preptime']; ?> </td></tr>
 						<tr><td>Cook Time</td><td> <?php echo $row['recipe_cooktime']; ?> </td></tr>
 						<tr><td>Total Time</td><td><?php echo $row['recipe_totaltime']; ?> </td></tr>
