@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$dynamicRecipeUrl = "view.php?recipe=" . $recipeNameWithoutSpace;
 
 							echo "<div class='menu-grids'><div class='col-md-4 menu-grid'>
-							<a href='" . $dynamicRecipeUrl . "'>" . "<img src='" . $recipeImgUrl . "' class='img-responsive' alt='' /></a>
+							<a href='" . $dynamicRecipeUrl . "'>" . "<img src='" . $recipeImgUrl . "' class='img-responsive img-rounded' alt='' /></a>
 							<div class='recipes head'><a href='" . $dynamicRecipeUrl . "'>" . $recipeName . "</a></div>
 							<div class='price'>
 								<span>" . $recipeRegion . "</span>

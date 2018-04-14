@@ -26,7 +26,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--web-fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Niconne|Playball|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
 	<!--//web-fonts-->
-	<link href="css/flashPulse.css" rel='stylesheet' type='text/css' />
 	<script src="comment.js"></script>
 </head>
 <body>
@@ -118,7 +117,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					$result = mysql_query($query) or die("Error processing query" . mysql_error());
 					
 					$row = mysql_fetch_array($result);		
-					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='pulseit' class='img-responsive' alt='' width='65%' height='65%'/>";
+					echo "<img src= ' " . $row['recipe_imgurl1'] . " ' class='img-rounded img-responsive col-xs-6' align'center' alt='' width='65%' height='65%'/>";
 					
 					echo "<h3><a href='view.php'>" . $row['recipe_name'] . "</a></h3>";
 					
@@ -127,9 +126,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					echo "<p>" . $row['recipe_description'] . "</p>";
 					
 					echo "<p>
-						<img src='" . $row['recipe_imgurl2'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
-						<img src='" . $row['recipe_imgurl3'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
-						<img src='" . $row['recipe_imgurl4'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img class='img-rounded' src='" . $row['recipe_imgurl2'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img class='img-rounded' src='" . $row['recipe_imgurl3'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
+						<img class='img-rounded' src='" . $row['recipe_imgurl4'] . "' style='float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;'>
 						<p style='clear: both;'>
 						</p>";
 
