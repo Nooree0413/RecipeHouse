@@ -134,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					print "<h3>Search Results:</h3>";
 					require('clientRecipeSearch.php');
 				}
-
+				echo"<br/><br/>";
 			?>
 
 
