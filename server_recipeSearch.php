@@ -39,7 +39,7 @@ function recipeSearch($category, $region, $recipeName,$yield,$ingredient){
         $query = $queryregion;
 
     if($recipeName != '')
-        $queryRecipeName = "recipe_name = '$recipeName' ";
+    $queryRecipeName = "recipe_name  LIKE '% ".$recipeName." %'";
     if($query != '' && $queryRecipeName != '')
         $query .= " and $queryRecipeName";
     else if($queryRecipeName != '')
