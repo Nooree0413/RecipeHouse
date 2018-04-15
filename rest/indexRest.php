@@ -1,16 +1,13 @@
 <?php
-	
 
-
-header("Content-Type:applicatiion/json");
 include("functionGetTemp.php");
 
 if(!empty($_GET['temperature'])){
 
 	$tempFC=$_GET['temperature'];
 	$convertedTemp=getTemperature($tempFC);
-
-	deliver_response(200,"Temperature successfull,$convertedTemp");
+	
+	deliver_response(200,"Temperature successful",$convertedTemp);
 }
 else{
 
