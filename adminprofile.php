@@ -60,6 +60,7 @@ onUnload="alert('Thank you visitiong our website!')">
             
             <li><a href="gallery.php">GALLERY</a></li> 
             <li class="lost"><a href="contact.html">Contact</a></li></br></br>
+            <li><a  href="recipeSearch.php">Search Recipe</a></li>
           </ul>
           <br/>
          <div id="userlogin" class="form1 active">

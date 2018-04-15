@@ -44,6 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						<li><a class="active" href="gallery.php">Gallery</a></li> 
 						<li><a href="contact.html">Contact</a></li>
+						<li><a  href="recipeSearch.php">Search Recipe</a></li>
 						
 						<div id="userlogin" class="form1 active">
 							<?php

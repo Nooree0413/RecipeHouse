@@ -44,6 +44,7 @@ onUnload="alert('Thank you visitiong our website!')">-->
 						<!--<li><a href="404.php">BLOG</a></li> -->
 						<li><a href="portfolio.php">GALLERY</a></li> 
 						<li><a href="contact.php">Contact</a></li>
+						<li><a  href="recipeSearch.php">Search Recipe</a></li>
 						
 						
 						<div id="userlogin" class="form1 active">
