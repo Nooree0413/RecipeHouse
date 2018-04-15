@@ -41,14 +41,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="menu.php">RECIPES</a></li>
 						<li><a class="active"  href="cuisine.php">CUISINES</a></li>
 						<li><a class="active" href="404.php">SERVICES</a></li> 
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 						
 						<div id="userlogin" class="form1 active">
 							<?php
-								
-								<?php
-								
+															
 								if(isset($_SESSION['admin_email'])){
 									echo  "<a id='loginbtn' href='admintask.php'>Admin</a>&nbsp;&nbsp;&nbsp;<a id='loginbtn' href='process_logout.php'>Log out</a>&nbsp;&nbsp;&nbsp;<a id='' href='search.php'>Search</a>";
 								}
@@ -121,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="menu.php">RECIPES</a></li> 
 							<li><a href="cuisine.php">CUISINES</a></li>
 							<li><a href="404.php">SERVICES</a></li> 
-							<li><a href="portfolio.php">GALLERY</a></li> 
+							<li><a href="gallery.php">GALLERY</a></li> 
 							<li><a href="contact.php">Contact</a></li>
 							<div class="clearfix"> </div>
 						</ul>

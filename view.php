@@ -42,7 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="about.php">About</a></li>
 						<li><a href="cuisine.php">CUISINES</a></li>
 						<li><a href="recipes.php">RECIPES</a></li>
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 						
 						<div id="userlogin" class="form1 active">
@@ -320,7 +320,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="cuisine.php">CUISINES</a></li>
 						<li><a href="recipes.php">RECIPES</a>	</li>
 						<li><a href="404.php">BLOG</a></li> 
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 							<div class="clearfix"> </div>
 						</ul>

@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a  href="cuisine.php">CUISINES</a></li>						
 						<li><a href="recipes.php">RECIPES</a></li>
 						<!--<li><a href="404.php">SERVICES</a></li> -->
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 						
 						<div id="userlogin" class="form1 active">
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="cuisine.php">CUISINES</a></li>
 						<li><a href="recipes.php">RECIPES</a>	</li>
 						<li><a href="404.php">BLOG</a></li> 
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 							<div class="clearfix"> </div>
 						</ul>

@@ -42,7 +42,7 @@ onUnload="alert('Thank you visitiong our website!')">-->
 						<li><a href="cuisine.php">CUISINES</a></li>
 						<li><a href="recipes.php">RECIPES</a>	</li>
 						<!--<li><a href="404.php">BLOG</a></li> -->
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li><a href="contact.php">Contact</a></li>
 						<li><a  href="recipeSearch.php">Search Recipe</a></li>
 						
@@ -388,7 +388,7 @@ onUnload="alert('Thank you visitiong our website!')">-->
 						<li><a href="cuisine.php">CUISINES</a></li>
 						<li><a href="recipes.php">RECIPES</a>	</li>
 						<!--<li><a href="404.php">BLOG</a></li>--> 
-						<li><a href="portfolio.php">GALLERY</a></li> 
+						<li><a href="gallery.php">GALLERY</a></li> 
 						<li class="lost"><a href="contact.php">Contact</a></li>
 							<div class="clearfix"> </div>
 						</ul>
