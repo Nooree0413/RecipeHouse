@@ -21,7 +21,7 @@
 </head>
 <?php
 $client_recipeSearch = new SoapClient(null, array(
-'location' => "http://localhost/RecipeHouse1/server_recipeSearch.php",
+'location' => "http://localhost/RecipeHouse/server_recipeSearch.php",
 'uri' => "urn://tyler/req"));
 
 
