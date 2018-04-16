@@ -95,10 +95,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</script>
 			<!--//swipebox Ends -->
 			<?php
-				$category=" ";
-				$region=" ";
-				$recipeName=" ";
-				$yield=" ";
+			
+				$_GET['txt_category'] = "";
+				$_GET['txt_region'] = "";
+				$_GET['txt_recipeName'] = " ";
+				$_GET['txt_yield'] = " ";
 
 				$category = $_GET['txt_category'];
 				$region = $_GET['txt_region'];
