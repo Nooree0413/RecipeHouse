@@ -1,5 +1,6 @@
-
-
+<!DOCTYPE html>
+<head></head>
+<body>
 
 	<!--
 Author: W3layouts
@@ -105,29 +106,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   				</div>
 		 		</div>
 	
+<form action='client.php' method='POST'>
+Temperature:
+<input type='text' name='temperature'>
+<button type='submit' name='submit'>Fahrenheit To Celsius</button>
+
+</form>
+
+</body></html>
+
 <?php
-require "api.php";
+	
+	if(isset($_POST['temperature'])){
+		
+		$tempFC=$_POST['temperature'];
 
-	if(isset($_POST['submit'])){
-
-		$name=$_POST['name'];
-		$url="http://localhost/web/RecipeHouse/restFinal/api/".$name;
-
+		$url="http://localhost/RecipeHouse/indexRest.php?temperature=" . $tempFC;
 		$client=curl_init($url);
-		curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
 
+		curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
+		
 		$response=curl_exec($client);
-
+		//echo $response;
 		$result=json_decode($response);
 
-		if($result!=''){
-
-			print'<table border="1">';
-			print"<tr><td>Name</td><td>Surname</td><td>Email</td></tr>";
-
-			echo $result->data;
-			echo"</table>";
-		}
+		echo $result->data;
 	}
-	?>
 
+	 
+
+?>
